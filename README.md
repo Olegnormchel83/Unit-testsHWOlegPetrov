@@ -1,0 +1,1 @@
+https://docs.google.com/document/d/1kN_eezuomQwvLUuxH53xKybUl3yjeDl9rYkePGvt-qg/edit?usp=sharing - Задания с текстом.
