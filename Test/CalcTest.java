@@ -8,7 +8,6 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CalcTest {
     CollectionCalc cCalc;
@@ -28,28 +27,31 @@ class CalcTest {
 
     @Test
     void testCompareAveragesFirstBigger() {
+        String actual = "Первый список имеет большее среднее значение";
 
         List<Integer> col1 = new ArrayList<>(Arrays.asList(7, 7, 7, 7));
         List<Integer> col2 = new ArrayList<>(Arrays.asList(5, 5, 5, 5));
 
-        assertTrue(cCalc.getAverageValue(col1) > cCalc.getAverageValue(col2));
+        assertEquals(cCalc.compareAverageValues(col1, col2), actual);
     }
 
     @Test
     void testCompareAveragesSecondBigger() {
+        String actual = "Второй список имеет большее среднее значение";
 
         List<Integer> col1 = new ArrayList<>(Arrays.asList(7, 7, 7, 7));
         List<Integer> col2 = new ArrayList<>(Arrays.asList(9, 9, 9, 9));
 
-        assertTrue(cCalc.getAverageValue(col1) < cCalc.getAverageValue(col2));
+        assertEquals(cCalc.compareAverageValues(col1, col2), actual);
     }
 
     @Test
     void testCompareAveragesValuesAreEqual() {
+        String actual = "Средние значения равны";
 
         List<Integer> col1 = new ArrayList<>(Arrays.asList(7, 7, 7, 7));
         List<Integer> col2 = new ArrayList<>(Arrays.asList(7, 7, 7, 7));
 
-        assertEquals(cCalc.getAverageValue(col1), cCalc.getAverageValue(col2));
+        assertEquals(cCalc.compareAverageValues(col1, col2), actual);
     }
 }

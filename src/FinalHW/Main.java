@@ -1,7 +1,6 @@
 package FinalHW;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 public class Main {
     static CollectionCalc cCalc;

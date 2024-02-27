@@ -15,13 +15,13 @@ public class CollectionCalc implements ICollectionCalc {
     }
 
     @Override
-    public void compareAverageValues(List<Integer> col1, List<Integer> col2) {
+    public String compareAverageValues(List<Integer> col1, List<Integer> col2) {
         if (getAverageValue(col1) > getAverageValue(col2)) {
-            logger.log("Первый список имеет большее среднее значение");
+            return "Первый список имеет большее среднее значение";
         } else if (getAverageValue(col1) < getAverageValue(col2)) {
-            logger.log("Второй список имеет большее среднее значение");
+            return "Второй список имеет большее среднее значение";
         } else {
-            logger.log("Средние значения равны");
+            return "Средние значения равны";
         }
     }
 }
